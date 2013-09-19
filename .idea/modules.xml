@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ContactPicker/ContactPicker.iml" filepath="$PROJECT_DIR$/ContactPicker/ContactPicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ContactPickerProject.iml" filepath="$PROJECT_DIR$/ContactPickerProject.iml" />
+    </modules>
+  </component>
+</project>
+
