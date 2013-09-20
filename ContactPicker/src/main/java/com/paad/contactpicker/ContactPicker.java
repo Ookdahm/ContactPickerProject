@@ -1,5 +1,6 @@
 package com.paad.contactpicker;
 
+import android.content.ContentUris;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -30,7 +31,24 @@ public class ContactPicker extends Activity {
 
         ListView lv = (ListView)findViewById(R.id.contactListView);
         lv.setAdapter(adapter);
+
+        lv.setOnItemClickListener(new ListView.OnItemClickListener(){
+            public void onItemClick(AdapterView<?> parent, View view, int pos, long id){
+                // Move the cursor to the selected item
+                c.moveToPosition(pos);
+                // Extract the row id
+                int rowId = c.getInt(c.getColumnIndexOrThrow("_id"));
+                // Construct the result URI
+                Uri outURI =
+                        ContentUris.withAppendedId(Contacts.CONTENT_URI, rowId);
+                Intent outData = new Intent();
+                outData.setData(outURI);
+                setResult(Activity.RESULT_OK, outData);
+                finish();;
+            }
+        });
     }
+
 
 
     

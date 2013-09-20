@@ -11,5 +11,5 @@
         android:id="@+id/itemTextView"
         android:padding="10dp"
         android:textSize="16dp"
-        android:textColor="#FFF"/>
+        android:textColor="@color/black"/>
 </LinearLayout>
